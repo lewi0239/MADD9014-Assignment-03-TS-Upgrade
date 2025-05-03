@@ -61,11 +61,12 @@ function fetchData(userName) {
         container.appendChild(errorMessage);
     });
 }
+//For the original assignment we had the option todo innerhtml or textcontent
 function displayData(repos) {
     container.innerHTML = "";
     repos.forEach(function (repo) {
         var li = document.createElement("li");
-        li.innerHTML = "\n    <div class=\"repos\">\n    <p>".concat(repo.name, "</p>\n    <a href=\"").concat(repo.url, "\" target=\"_blank\">").concat(repo.url, "</a>\n    <p>").concat(repo.description, "</p>\n   <img src=\"").concat(repo.avatar, "\" alt=\"avatar\" width=\"100\">\n    </div>\n    ");
+        li.innerHTML = "\n    <div class=\"repos\">\n    <p>".concat(repo.name, "</p>\n    <a href=\"").concat(repo.url, "\" target=\"_blank\">").concat(repo.url, "</a>\n    <p>").concat(repo.description, "</p>\n   <img class=\"avatar\"src=\"").concat(repo.avatar, "\" alt=\"avatar\" width=\"100\">\n    </div>\n    ");
         ul.appendChild(li);
     });
     container.appendChild(ul);

@@ -73,7 +73,7 @@ function fetchData(userName: string): void {
       container!.appendChild(errorMessage);
     });
 }
-
+//For the original assignment we had the option todo innerhtml or textcontent
 function displayData(repos: Repo[]): void {
   container!.innerHTML = "";
   repos.forEach((repo) => {
@@ -83,7 +83,7 @@ function displayData(repos: Repo[]): void {
     <p>${repo.name}</p>
     <a href="${repo.url}" target="_blank">${repo.url}</a>
     <p>${repo.description}</p>
-   <img src="${repo.avatar}" alt="avatar" width="100">
+   <img class="avatar"src="${repo.avatar}" alt="avatar" width="100">
     </div>
     `;
     ul.appendChild(li);

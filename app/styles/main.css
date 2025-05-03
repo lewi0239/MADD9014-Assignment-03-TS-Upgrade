@@ -1,0 +1,61 @@
+.repo-list {
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-auto-rows: 1fr;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 2rem;
+}
+
+.repos {
+  margin: auto;
+  width: 100%;
+  max-width: 30rem;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  text-wrap: wrap;
+  font-size: medium;
+  text-align: center;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: top ease 0.8ss;
+}
+
+.avatar {
+  width: 100%;
+}
+
+P,
+a {
+  padding-left: 1.5rem;
+}
+
+form {
+  margin: auto;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+@media only screen and (min-width: 35rem) {
+  .repo-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 60rem) {
+  .repo-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.repos:hover {
+  box-shadow: rgba(42, 42, 46, 0.2) 0px 7px 29px 0px;
+  transform: translateY(-5px);
+}
